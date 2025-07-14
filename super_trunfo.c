@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    char estado, código[4], cidade[50];
-    float área, pib;
-    int população, PontosTurísticos;
+    char estado, codigo[4], cidade[50];
+    float area, pib;
+    int populacao, PontosTuristicos;
 
     //Entrada de dados (CARTA 01):
 
@@ -13,22 +13,22 @@ int main() {
     scanf(" %c", &estado);                   //Estado
 
     printf("Código da Carta - A letra de um estado seguida de um número de 01 a 04 (ex:A01, B03): ");
-    scanf("%s", código);                    //Códido da carta
+    scanf("%s", &codigo);                    //Códido da carta
     
     printf("Nome da cidade: ");
     scanf("%s", cidade);                     //Nome da cidade
 
     printf("População: ");
-    scanf("%d", &população);                 //População
+    scanf("%d", &populacao);                 //População
 
     printf("Área (em km²): ");
-    scanf("%f", &área);                      //Área
+    scanf("%f", &area);                      //Área
 
     printf("PIB: ");
     scanf("%f", &pib);                       //PIB
 
     printf("Número de Pontos Turísticos: ");
-    scanf("%d", &PontosTurísticos);          //Números de pontos turísticos
+    scanf("%d", &PontosTuristicos);          //Números de pontos turísticos
 
     //Saída de dados (CARTA 01):
 
@@ -36,17 +36,17 @@ int main() {
 
     printf("\nEstado: %c\n", estado);
 
-    printf("Código: %s\n", código);
+    printf("Código: %s\n", codigo);
 
     printf("Nome da Cidade: %s\n", cidade);
 
-    printf("População: %d\n", população);
+    printf("População: %d\n", populacao);
 
-    printf("Área (em km²): %.2f km²\n", área);
+    printf("Área (em km²): %.2f km²\n", area);
 
     printf("PIB: %.2f bilhões de reais\n", pib);
 
-    printf("Números de Pontos Turísticos: %d\n", PontosTurísticos);
+    printf("Números de Pontos Turísticos: %d\n", PontosTuristicos);
 
     //Entrada de dados (CARTA 02):
 
@@ -56,22 +56,22 @@ int main() {
     scanf(" %c", &estado);                   //Estado
 
     printf("Código da Carta - A letra de um estado seguida de um número de 01 a 04 (ex:A01, B03): ");
-    scanf("%s", código);                    //Códido da carta
+    scanf("%s", &codigo);                    //Códido da carta
     
     printf("Nome da cidade: ");
     scanf("%s", cidade);                     //Nome da cidade
 
     printf("População: ");
-    scanf("%d", &população);                 //População
+    scanf("%d", &populacao);                 //População
 
     printf("Área (em km²): ");
-    scanf("%f", &área);                      //Área
+    scanf("%f", &area);                      //Área
 
     printf("PIB: ");
     scanf("%f", &pib);                       //PIB
 
     printf("Número de Pontos Turísticos: ");
-    scanf("%d", &PontosTurísticos);          //Números de pontos turísticos
+    scanf("%d", &PontosTuristicos);          //Números de pontos turísticos
 
     //Saída de dados (CARTA 02):
 
@@ -79,17 +79,17 @@ int main() {
 
     printf("\nEstado: %c\n", estado);
 
-    printf("Código: %s\n", código);
+    printf("Código: %s\n", codigo);
 
     printf("Nome da Cidade: %s\n", cidade);
 
-    printf("População: %d\n", população);
+    printf("População: %d\n", populacao);
 
-    printf("Área (em km²): %.2f km²\n", área);
+    printf("Área (em km²): %.2f km²\n", area);
 
     printf("PIB: %.2f bilhões de reais\n", pib);
 
-    printf("Números de Pontos Turísticos: %d\n", PontosTurísticos);
+    printf("Números de Pontos Turísticos: %d\n", PontosTuristicos);
 
 
     return 0;
