@@ -81,9 +81,9 @@ int main() {
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &PontosTuristicos);          //Números de pontos turísticos
 
-    DensidadePopulacional = populacao / area;
+    DensidadePopulacional = populacao / area;     //Cálculo da Densidade Populacional
 
-    pibPerCapita = pib / populacao;
+    pibPerCapita = pib / populacao;              //Cálculo do PIB per Capita
 
     //Saída de dados (CARTA 02):
 
