@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    char estado, codigo[4], cidade[50];
-    char carta01[20] = "Carta 01";
-    char carta02[20] = "Carta 02";
+    char estado01, codigo01[4], cidade01[50], carta01[20] = "Carta 01";
+    char estado02, codigo02[4], cidade02[50], carta02[20] = "Carta 02";
 
     float area01, pib01, DensidadePopulacional01, pibPerCapita01, inverso01, superpoder01;
     float area02, pib02, DensidadePopulacional02, pibPerCapita02, inverso02, superpoder02;
@@ -19,13 +18,13 @@ int main() {
     printf("Dados da Carta 01: \n");
 
     printf("\nEstado (Letra de A a H): ");
-    scanf(" %c", &estado);                   //Estado
+    scanf(" %c", &estado01);                   //Estado
 
     printf("Código da Carta - A letra de um estado seguida de um número de 01 a 04 (ex:A01, B03): ");
-    scanf("%s", &codigo);                    //Códido da carta
+    scanf("%s", &codigo01);                    //Códido da carta
     
     printf("Nome da cidade: ");
-    scanf("%s", cidade);                     //Nome da cidade
+    scanf("%s", cidade01);                     //Nome da cidade
 
     printf("População: ");
     scanf("%u", &populacao01);                 //População
@@ -51,11 +50,11 @@ int main() {
 
     printf("\nCarta 01: \n");
 
-    printf("\nEstado: %c\n", estado);
+    printf("\nEstado: %c\n", estado01);
 
-    printf("Código: %s\n", codigo);
+    printf("Código: %s\n", codigo01);
 
-    printf("Nome da Cidade: %s\n", cidade);
+    printf("Nome da Cidade: %s\n", cidade01);
 
     printf("População: %u\n", populacao01);
 
@@ -74,13 +73,13 @@ int main() {
     printf("\nDados da Carta 02: \n");
 
     printf("\nEstado (Letra de A a H): ");
-    scanf(" %c", &estado);                   //Estado
+    scanf(" %c", &estado02);                   //Estado
 
     printf("Código da Carta - A letra de um estado seguida de um número de 01 a 04 (ex:A01, B03): ");
-    scanf("%s", &codigo);                    //Códido da carta
+    scanf("%s", &codigo02);                    //Códido da carta
     
     printf("Nome da cidade: ");
-    scanf("%s", cidade);                     //Nome da cidade
+    scanf("%s", cidade02);                     //Nome da cidade
 
     printf("População: ");
     scanf("%u", &populacao02);                 //População
@@ -106,11 +105,11 @@ int main() {
 
     printf("\nCarta 02: \n");
 
-    printf("\nEstado: %c\n", estado);
+    printf("\nEstado: %c\n", estado02);
 
-    printf("Código: %s\n", codigo);
+    printf("Código: %s\n", codigo02);
 
-    printf("Nome da Cidade: %s\n", cidade);
+    printf("Nome da Cidade: %s\n", cidade02);
 
     printf("População: %u\n", populacao02);
 
@@ -128,7 +127,26 @@ int main() {
     
     printf("\nComparação das Cartas: \n");
 
-    printf("\nPopulação: %s venceu (%d)\n", carta01, (populacao01 > populacao02));
+    //Estrutura de decisão: População
+
+    if (populacao01 > populacao02) {
+        printf("\nAtributo: (População):\n");
+
+        printf("\nCarta 01 - %s : %u\n", cidade01, populacao01);
+        
+        printf("\nCarta 02 - %s : %u\n", cidade02, populacao02);
+
+        printf("\nResultado: Carta 01 (%s) Venceu!\n", cidade01);
+    }
+    else {
+        printf("\nAtributo: População):\n");
+
+        printf("\nCarta 01 - %s : %u\n", cidade01, populacao01);
+        
+        printf("\nCarta 02 - %s : %u\n", cidade02, populacao02);
+
+        printf("\nResultado: Carta 02 (%s) Venceu!\n", cidade02);
+    }
 
     printf("Área: %s venceu (%d)\n", carta01, (area01 > area02));
 
