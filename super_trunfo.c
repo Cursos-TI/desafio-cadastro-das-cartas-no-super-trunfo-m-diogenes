@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 int main() {
     char estado01, codigo01[4], cidade01[50], carta01[20] = "Carta 01";
@@ -17,9 +15,6 @@ int main() {
     unsigned long int populacao01;
     unsigned long int populacao02;
 
-    srand (time(0));
-    escolhaJogador = rand() % 10;
-
     printf("=== Jogo Super Trunfo! ===\n");
 
     //Entrada de dados (CARTA 01):
@@ -30,13 +25,13 @@ int main() {
     scanf(" %c", &estado01);                   //Estado
 
     printf("Código da Carta - A letra de um estado seguida de um número de 01 a 04 (ex:A01, B03): ");
-    scanf("%s", &codigo01);                    //Códido da carta
+    scanf("%s", codigo01);                    //Códido da carta
     
     printf("Nome da cidade: ");
     scanf("%s", cidade01);                     //Nome da cidade
 
     printf("População: ");
-    scanf("%u", &populacao01);                 //População
+    scanf("%lu", &populacao01);                 //População
 
     printf("Área (em km²): ");
     scanf("%f", &area01);                      //Área
@@ -49,7 +44,7 @@ int main() {
 
     DensidadePopulacional01 = populacao01 / area01;
 
-    pibPerCapita01 = pib01 / populacao01;
+    pibPerCapita01 = (pib01 * 1000000000.0f) / populacao01;
 
     inverso01 = 1 / DensidadePopulacional01;    //Inverso da densidade populacional (quanto menor densidade, maior o poder)
 
@@ -63,13 +58,13 @@ int main() {
     scanf(" %c", &estado02);                   //Estado
 
     printf("Código da Carta - A letra de um estado seguida de um número de 01 a 04 (ex:A01, B03): ");
-    scanf("%s", &codigo02);                    //Códido da carta
+    scanf("%s", codigo02);                    //Códido da carta
     
     printf("Nome da cidade: ");
     scanf("%s", cidade02);                     //Nome da cidade
 
     printf("População: ");
-    scanf("%u", &populacao02);                 //População
+    scanf("%lu", &populacao02);                 //População
 
     printf("Área (em km²): ");
     scanf("%f", &area02);                      //Área
@@ -82,7 +77,7 @@ int main() {
 
     DensidadePopulacional02 = populacao02 / area02;     //Cálculo da Densidade Populacional
 
-    pibPerCapita02 = pib02 / populacao02;              //Cálculo do PIB per Capita
+    pibPerCapita02 = (pib02 * 1000000000.0f) / populacao02;              //Cálculo do PIB per Capita
 
     inverso02 = 1 / DensidadePopulacional02;           //Inverso da densidade populacional (quanto menor densidade, maior o poder)
 
@@ -116,7 +111,7 @@ int main() {
     
         printf("Nome da Cidade: %s\n", cidade01);
     
-        printf("População: %u\n", populacao01);
+        printf("População: %lu\n", populacao01);
     
         printf("Área (em km²): %.2f km²\n", area01);
     
@@ -142,7 +137,7 @@ int main() {
     
         printf("Nome da Cidade: %s\n", cidade02);
     
-        printf("População: %u\n", populacao02);
+        printf("População: %lu\n", populacao02);
     
         printf("Área (em km²): %.2f km²\n", area02);
     
@@ -163,18 +158,18 @@ int main() {
         if (populacao01 > populacao02) {
         printf("\nAtributo: (População):\n");
 
-        printf("\nCarta 01 - %s : %u\n", cidade01, populacao01);
+        printf("\nCarta 01 - %s : %lu\n", cidade01, populacao01);
         
-        printf("\nCarta 02 - %s : %u\n", cidade02, populacao02);
+        printf("\nCarta 02 - %s : %lu\n", cidade02, populacao02);
 
         printf("\nResultado: Carta 01 (%s) venceu!\n", cidade01);
         }
         else if (populacao02 > populacao01) {
         printf("\nAtributo: (População):\n");
 
-        printf("\nCarta 01 - %s: %u\n", cidade01, populacao01);
+        printf("\nCarta 01 - %s: %lu\n", cidade01, populacao01);
         
-        printf("\nCarta 02 - %s: %u\n", cidade02, populacao02);
+        printf("\nCarta 02 - %s: %lu\n", cidade02, populacao02);
 
         printf("\nResultado: Carta 02 (%s) venceu!\n", cidade02);
         }
@@ -218,7 +213,7 @@ int main() {
         if (pib01 > pib02) {
         printf("\nAtributo: (PIB):\n");
 
-        printf("\nCarta 01 - %s: %.2f\n", carta01, pib01);
+        printf("\nCarta 01 - %s: %.2f\n", cidade01, pib01);
 
         printf("\nCarta 02 - %s: %.2f\n", cidade02, pib02);
 
