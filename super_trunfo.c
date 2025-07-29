@@ -95,33 +95,6 @@ int main() {
 
         printf("\nEscolha a opção do primeiro atributo para comparar ou ver informações das cartas:\n");
     
-        printf("\nA. Informações da (Carta 01)\n");
-    
-        printf("B. Informações da (Carta 02)\n");
-    
-        printf("1. Atributo: População\n");
-    
-        printf("2. Atributo: Área\n");
-    
-        printf("3. Atributo: PIB\n");
-    
-        printf("4. Atributo: Pontos Turísticos\n");
-    
-        printf("5. Atributo: Densidade Populacional\n");
-    
-        printf("6. Atributo: PIB per Capita\n");
-    
-        printf("7. Atributo: Super Poder\n");
-    
-        printf("\nEscolha: ");
-        scanf("%d", &escolhaJogador01);
-
-        //Menu de escolha do segundo atributo
-
-        printf("\nEscolha o segundo atributo: \n");
-    
-        printf("\nAtenção: Você deve escolher um atributo diferente do primeiro!\n");
-   
         printf("\n1. Atributo: População\n");
     
         printf("2. Atributo: Área\n");
@@ -135,66 +108,15 @@ int main() {
         printf("6. Atributo: PIB per Capita\n");
     
         printf("7. Atributo: Super Poder\n");
+
+        printf("8. Informações da (Carta 01)\n");
+    
+        printf("9. Informações da (Carta 02)\n");
     
         printf("\nEscolha: ");
-        scanf("%d", &escolhaJogador02);
+        scanf("%d", &escolhaJogador01);
 
         switch (escolhaJogador01) {
-
-            //Informações das cartas
-
-            //Saída de dados (CARTA 01):
-
-            case 'A':
-            case 'a':
-        
-            printf("\nCarta 01:\n");
-        
-            printf("\nEstado: %c\n", estado01);
-        
-            printf("Código: %s\n", codigo01);
-        
-            printf("Nome da Cidade: %s\n", cidade01);
-        
-            printf("População: %lu\n", populacao01);
-        
-            printf("Área (em km²): %.2f km²\n", area01);
-        
-            printf("PIB: %.2f bilhões de reais\n", pib01);
-        
-            printf("Números de Pontos Turísticos: %d\n", PontosTuristicos01);
-        
-            printf("Densidade Populacional: %.2f hab/km²\n", DensidadePopulacional01);
-        
-            printf("PIB per Capita: %.2f reais\n", pibPerCapita01);
-        
-            break;
-
-            case 'B':
-            case 'b':
-            //Saída de dados (CARTA 02):
-        
-            printf("\nCarta 02:\n");
-        
-            printf("\nEstado: %c\n", estado02);
-        
-            printf("Código: %s\n", codigo02);
-       
-            printf("Nome da Cidade: %s\n", cidade02);
-       
-            printf("População: %lu\n", populacao02);
-       
-            printf("Área (em km²): %.2f km²\n", area02);
-       
-            printf("PIB: %.2f bilhões de reais\n", pib02);
-       
-            printf("Números de Pontos Turísticos: %d\n", PontosTuristicos02);
-        
-            printf("Densidade Populacional: %.2f hab/km²\n", DensidadePopulacional02);
-        
-            printf("PIB per Capita: %.2f reais\n", pibPerCapita02);
-
-            break;
             
             //Escolha do primeiro atributo
 
@@ -370,10 +292,86 @@ int main() {
             }
         
             break;
+
+            //Informações das cartas
+
+            //Saida de dados (CARTA 01):
+
+            case 8:
+        
+            printf("\nCarta 01:\n");
+        
+            printf("\nEstado: %c\n", estado01);
+        
+            printf("Código: %s\n", codigo01);
+        
+            printf("Nome da Cidade: %s\n", cidade01);
+        
+            printf("População: %lu\n", populacao01);
+        
+            printf("Área (em km²): %.2f km²\n", area01);
+        
+            printf("PIB: %.2f bilhões de reais\n", pib01);
+        
+            printf("Números de Pontos Turísticos: %d\n", PontosTuristicos01);
+        
+            printf("Densidade Populacional: %.2f hab/km²\n", DensidadePopulacional01);
+        
+            printf("PIB per Capita: %.2f reais\n", pibPerCapita01);
+        
+            break;
+
+            case 9:
+            //Saída de dados (CARTA 02):
+        
+            printf("\nCarta 02:\n");
+        
+            printf("\nEstado: %c\n", estado02);
+        
+            printf("Código: %s\n", codigo02);
+       
+            printf("Nome da Cidade: %s\n", cidade02);
+       
+            printf("População: %lu\n", populacao02);
+       
+            printf("Área (em km²): %.2f km²\n", area02);
+       
+            printf("PIB: %.2f bilhões de reais\n", pib02);
+       
+            printf("Números de Pontos Turísticos: %d\n", PontosTuristicos02);
+        
+            printf("Densidade Populacional: %.2f hab/km²\n", DensidadePopulacional02);
+        
+            printf("PIB per Capita: %.2f reais\n", pibPerCapita02);
+
+            break;
         
             default:
             printf("Opção invalida!\n");
         }
+
+         //Menu de escolha do segundo atributo
+
+        printf("\nEscolha o segundo atributo: \n");
+    
+        printf("\nAtenção: Você deve escolher um atributo diferente do primeiro!\n");
+   
+        printf("\n1. Atributo: População\n");
+    
+        printf("2. Atributo: Área\n");
+    
+        printf("3. Atributo: PIB\n");
+    
+        printf("4. Atributo: Pontos Turísticos\n");
+    
+        printf("5. Atributo: Densidade Populacional\n");
+    
+        printf("6. Atributo: PIB per Capita\n");
+    
+        printf("7. Atributo: Super Poder\n");
+    
+        printf("\nEscolha: ");
+        scanf("%d", &escolhaJogador02);
 
         if (escolhaJogador01 == escolhaJogador02) {
         printf("\nVocê escolheu o mesmo atributo!\n");
